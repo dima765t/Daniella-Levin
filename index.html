@@ -1,56 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="he">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Therapist Name – Therapy Clinic</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>דניאלה לוין - מטפלת הוליסטית בתל אביב</title>
+  <meta name="description" content="טיפול הוליסטי למבוגרים ובני נוער, סביבה תומכת ודיסקרטית במרכז תל אביב.">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Analytics Example -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
 </head>
 <body>
-  <header>
-    <img src="images/therapist.jpg" alt="Therapist Portrait" class="profile-img"/>
-    <h1>Therapist Name</h1>
-    <p>Your path to well-being starts here</p>
-    <a href="#contact" class="cta">Book a Session</a>
+  <header class="header">
+    <div class="logo">דניאלה לוין</div>
+    <nav>
+      <a href="index.html">בית</a>
+      <a href="about.html">אודות</a>
+      <a href="contact.html">צור קשר</a>
+    </nav>
   </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
+  
   <main>
-    <section>
-      <h2>How Can I Help?</h2>
-      <ul>
-        <li>Anxiety & Stress</li>
-        <li>Relationship Therapy</li>
-        <li>Adolescent Counseling</li>
-        <li>Online and In-Clinic Appointments</li>
-      </ul>
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+      <div class="hero-banner-overlay"></div>
+      <div class="hero-banner-inner">
+        <div class="hero-banner-img-wrapper">
+          <img src="images/daniela.jpg" alt="דניאלה לוין מטפלת הוליסטית" class="hero-banner-img" />
+        </div>
+        <div class="hero-banner-content">
+          <h1 class="hero-title">דניאלה לוין</h1>
+          <h2 class="hero-job">מטפלת הוליסטית</h2>
+          <p class="hero-desc">
+            טיפול אישי במבוגרים ובני נוער<br>
+            בגישה מכילה, חמה וקשובה.<br>
+            תהליך שמותאם בדיוק בשבילך – גם בקליניקה במרכז תל אביב וגם אונליין.
+          </p>
+          <a href="contact.html" class="cta">לתיאום פגישה</a>
+          <a href="https://wa.me/YOUR_NUMBER" class="cta whatsapp" target="_blank">וואטסאפ</a>
+        </div>
+      </div>
     </section>
-    <section>
-      <h2>What Clients Say</h2>
-      <blockquote>
-        “I felt truly understood. Therapy made a real difference in my life.”
-        <footer>– A client</footer>
-      </blockquote>
+
+    <!-- Example About Preview Section -->
+    <section class="about-preview">
+      <h2>קצת עליי</h2>
+      <p>
+        מעל 10 שנות ניסיון בטיפול רגשי והוליסטי בגישה אינטגרטיבית, עם דגש על יחס אישי, חום והכלה. כאן כדי להקשיב, ללוות ולתמוך בדרך שלך.
+      </p>
     </section>
-    <section id="contact">
-      <h2>Contact & Book</h2>
-      <a href="https://wa.me/YOUR_NUMBER" class="cta whatsapp" target="_blank">Book via WhatsApp</a>
-      <a href="mailto:your@email.com" class="cta">Or Email Me</a>
-      <p>Clinic Location: [Your Address Here]</p>
+
+    <!-- Example Contact Preview Section -->
+    <section class="contact-preview">
+      <h2>רוצים לדבר?</h2>
+      <p>לחצו לשליחת הודעה בוואטסאפ או מלאו טופס קשר</p>
+      <a href="https://wa.me/YOUR_NUMBER" class="cta whatsapp" target="_blank">וואטסאפ</a>
+      <a href="contact.html" class="cta secondary">טופס קשר</a>
     </section>
   </main>
-
   <footer>
-    <p>© 2025 Therapist Name | 
-      <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a> | 
-      <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
-    </p>
+    <p>© 2025 דניאלה לוין | תל אביב</p>
+    <div>
+      <a href="https://instagram.com/yourprofile" target="_blank">אינסטגרם</a> |
+      <a href="https://facebook.com/yourprofile" target="_blank">פייסבוק</a>
+    </div>
+    <p>info@email.com | 050-0000000</p>
   </footer>
+  <a href="https://wa.me/YOUR_NUMBER" class="floating-whatsapp" target="_blank" aria-label="צ'אט בוואטסאפ"></a>
 </body>
 </html>
