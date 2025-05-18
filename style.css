@@ -52,31 +52,32 @@ body {
     background: #d89130;
   }
   
-  
+  /* 🎯 HERO SECTION FIXED FULLSCREEN WITH GRADIENT */
   .hero {
     position: relative;
+    height: 100vh;
     background: url("Images/image.png") no-repeat center center;
     background-size: cover;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    color: white;
+    overflow: hidden;
   }
   
-  .hero-overlay {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0) 100%);
+    z-index: 1;
   }
   
   .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 600px;
-    text-align: right;
     padding: 2rem;
+    color: white;
+    text-align: right;
   }
   
   .hero-content h2 {
@@ -89,6 +90,7 @@ body {
     margin-bottom: 1.5rem;
   }
   
+  /* 🧩 About and Values */
   .about,
   .values {
     background: #f3f3f3;
@@ -106,17 +108,23 @@ body {
     padding: 1.5rem;
     border-radius: 8px;
     flex: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
   }
   
+  /* 🦶 Footer */
   .footer {
     background: #dedede;
     padding: 1rem;
     text-align: center;
   }
   
-  /* Responsive tweaks */
+  /* 📱 Responsive */
   @media (max-width: 768px) {
+    .hero {
+      height: auto;
+      padding: 4rem 0;
+    }
+  
     .hero-content {
       padding: 1rem;
       max-width: 100%;
@@ -124,11 +132,6 @@ body {
   
     .hero-content h2 {
       font-size: 2rem;
-    }
-  
-    .hero {
-      height: auto;
-      padding: 3rem 0;
     }
   
     .value-cards {
