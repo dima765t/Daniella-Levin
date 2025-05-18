@@ -37,25 +37,34 @@
     </div>
   </section>
 
-  <section class="values">
-    <div class="container">
-      <h3>למה לבחור בי?</h3>
-      <div class="value-cards">
-        <div class="card">
-          <h4>ניסיון</h4>
-          <p>מעל עשור בטיפול בטראומות בילדות ויצירת טרנספורמציה אישית.</p>
-        </div>
-        <div class="card">
-          <h4>מודעות לטראומה</h4>
-          <p>טיפול בשלבים: יציבות, עיבוד, ותנועה קדימה.</p>
-        </div>
-        <div class="card">
-          <h4>מבוסס ראיות</h4>
-          <p>שילוב שיטות גוף-נפש בגישות טיפול קוגניטיביות.</p>
-        </div>
+  <section class="carousel-section">
+  <h2 class="carousel-title">מה ממליצים עליי</h2>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="testimonial active">
+        <p>״דניאלה עזרה לי לעבור תקופה קשה, ומאז החיים שלי השתנו.״</p>
+        <span>- רונית ש.</span>
+      </div>
+      <div class="testimonial">
+        <p>״הטיפול איתה היה מקצועי, אמפתי ומרפא. ממליצה בחום!״</p>
+        <span>- אייל מ.</span>
+      </div>
+      <div class="testimonial">
+        <p>״שילוב של טיפול עמוק עם כלים הוליסטיים. חוויה משנת חיים.״</p>
+        <span>- ליאת ג.</span>
       </div>
     </div>
-  </section>
+    <div class="carousel-buttons">
+      <button onclick="prevSlide()">⟨</button>
+      <button onclick="nextSlide()">⟩</button>
+    </div>
+    <div class="carousel-dots">
+      <span class="dot active" onclick="setSlide(0)"></span>
+      <span class="dot" onclick="setSlide(1)"></span>
+      <span class="dot" onclick="setSlide(2)"></span>
+    </div>
+  </div>
+</section>
 
   <footer class="footer">
     <div class="container">
@@ -63,4 +72,36 @@
     </div>
   </footer>
 </body>
+<script>
+  let current = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    testimonials.forEach((el, i) => {
+      el.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % testimonials.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + testimonials.length) % testimonials.length;
+    showSlide(current);
+  }
+
+  function setSlide(index) {
+    current = index;
+    showSlide(current);
+  }
+
+  // Autoplay every 5 seconds
+  setInterval(() => {
+    nextSlide();
+  }, 5000);
+</script>
 </html>

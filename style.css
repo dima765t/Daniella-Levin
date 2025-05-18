@@ -91,32 +91,68 @@ body {
   }
   
   /* 🧩 About and Values */
-  .about,
-  .values {
-    background: #f3f3f3;
-    padding: 3rem 0;
-  }
-  
-  .value-cards {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    flex: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  }
-  
-  /* 🦶 Footer */
-  .footer {
-    background: #dedede;
-    padding: 1rem;
-    text-align: center;
-  }
+  .carousel-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+  direction: rtl;
+}
+
+.carousel-title {
+  color: #3A5E7A;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  height: 160px;
+}
+
+.testimonial {
+  display: none;
+  padding: 20px;
+  font-size: 18px;
+  color: #333;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  color: #839373;
+  font-weight: bold;
+}
+
+.carousel-buttons {
+  margin-top: 15px;
+}
+
+.carousel-buttons button {
+  background-color: #8299B2;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.carousel-buttons button:hover {
+  background-color: #3A5E7A;
+}
   
   /* 📱 Responsive */
   @media (max-width: 768px) {
