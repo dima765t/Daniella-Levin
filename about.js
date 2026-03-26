@@ -51,9 +51,9 @@ document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el)
 
 // ── Statement word-by-word reveal ──
 function splitIntoWords(el) {
-  // preserve <br> and <em> tags while wrapping words
+  // preserve any HTML tag (including those with attributes) while wrapping words
   const html = el.innerHTML;
-  el.innerHTML = html.replace(/(<br\s*\/?>|<\/?em>|[^<\s]+)/g, (match) => {
+  el.innerHTML = html.replace(/(<[^>]+>|[^\s<]+)/g, (match) => {
     if (match.startsWith('<')) return match; // keep tags as-is
     return `<span class="word">${match}</span>`;
   });
