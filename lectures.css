@@ -1,0 +1,320 @@
+/* ============================================================
+   LECTURES PAGE — lectures.css
+   ============================================================ */
+
+/* ── Active nav link ── */
+.active-nav {
+  color: var(--amber) !important;
+}
+.active-nav::after {
+  width: 100% !important;
+}
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+.page-hero {
+  background: linear-gradient(160deg, var(--amber-pale) 0%, var(--beige) 100%);
+  padding: 9rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--beige-deeper);
+}
+
+.page-hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--brown);
+  margin: 0.5rem 0 1rem;
+  line-height: 1.15;
+}
+
+.page-hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   TABS
+   ============================================================ */
+.lectures-tabs-section {
+  padding: 2.5rem 0 0;
+  background: var(--white);
+}
+
+.lectures-tabs {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-btn {
+  background: var(--beige);
+  border: 1.5px solid var(--beige-deeper);
+  color: var(--text-soft);
+  font-family: 'Heebo', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.5rem 1.4rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.tab-btn:hover {
+  background: var(--amber-pale);
+  border-color: var(--amber);
+  color: var(--amber);
+}
+.tab-btn.active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ============================================================
+   LECTURES GRID
+   ============================================================ */
+.lectures-grid-section {
+  padding: 2.5rem 0 5rem;
+  background: var(--white);
+}
+
+.lectures-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ── Lecture Card ── */
+.lecture-card {
+  background: var(--beige);
+  border: 1px solid var(--beige-deeper);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.lecture-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+.lecture-card.hidden {
+  display: none;
+}
+
+/* ── Thumbnail ── */
+.lecture-thumb-link {
+  display: block;
+}
+
+.lecture-thumb {
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay shown on hover */
+.lecture-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.lecture-thumb:hover .lecture-thumb-overlay,
+.lecture-card:hover .lecture-thumb-overlay {
+  opacity: 1;
+}
+
+/* Play button for past lectures */
+.play-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--brown);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  padding-right: 2px; /* optical centre for triangle */
+  transition: background var(--transition), transform var(--transition);
+}
+.lecture-thumb:hover .play-icon {
+  background: var(--white);
+  transform: scale(1.12);
+}
+
+/* Ticket button for upcoming lectures */
+.btn-ticket {
+  background: var(--amber);
+  color: var(--white);
+  font-family: 'Heebo', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.65rem 1.6rem;
+  border-radius: 50px;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  white-space: nowrap;
+}
+.btn-ticket:hover {
+  background: var(--amber-light);
+  transform: scale(1.05);
+}
+
+/* Badge */
+.lecture-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.8rem;
+  border-radius: 50px;
+  z-index: 1;
+}
+.past-badge {
+  background: rgba(90, 112, 71, 0.88);
+  color: var(--white);
+}
+.upcoming-badge {
+  background: var(--amber);
+  color: var(--white);
+}
+
+/* Placeholder image gradients — past */
+.lecture-thumb--past-1 { background: linear-gradient(135deg, #6b4f2e 0%, #8b5e3c 60%, #c8933a 100%); }
+.lecture-thumb--past-2 { background: linear-gradient(135deg, #3a5c3a 0%, #5a7047 60%, #7a9462 100%); }
+.lecture-thumb--past-3 { background: linear-gradient(135deg, #5a3050 0%, #8b5e7c 60%, #c8839a 100%); }
+.lecture-thumb--past-4 { background: linear-gradient(135deg, #2e4a6b 0%, #4a6a8b 60%, #7aa0c8 100%); }
+
+/* Placeholder image gradients — upcoming */
+.lecture-thumb--upcoming-1 { background: linear-gradient(135deg, #c8933a 0%, #e8b05a 60%, #fbf0d9 100%); }
+.lecture-thumb--upcoming-2 { background: linear-gradient(135deg, #5a7047 0%, #7a9462 60%, #eaf0e5 100%); }
+
+/* ── Card body ── */
+.lecture-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+}
+
+.lecture-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.lecture-type-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+}
+.type--past     { background: #e8f0e8; color: #3a6b3a; }
+.type--upcoming { background: #fdf3e0; color: #8a5c00; }
+
+.lecture-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.lecture-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.lecture-location {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+.loc-icon {
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.lecture-desc {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* CTA links */
+.btn-watch,
+.btn-ticket-full {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--beige-deeper);
+  transition: color var(--transition), gap var(--transition);
+}
+.btn-watch {
+  color: var(--green);
+}
+.btn-watch:hover {
+  color: var(--amber);
+  gap: 0.6rem;
+}
+.btn-ticket-full {
+  color: var(--amber);
+}
+.btn-ticket-full:hover {
+  color: var(--green);
+  gap: 0.6rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .lectures-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero { padding: 8rem 0 3rem; }
+
+  .lectures-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .lectures-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lectures-tabs {
+    gap: 0.4rem;
+  }
+  .tab-btn {
+    font-size: 0.82rem;
+    padding: 0.45rem 1rem;
+  }
+}
