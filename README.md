@@ -27,4 +27,4 @@ To scale this digital asset and improve performance, the planned roadmap include
 - [ ] **Accessibility Compliance:** Integrate an accessibility widget and statement to meet local digital accessibility regulations.
 
 ## 📬 Project Management
-Maintained and managed by [Your Name] - [Link to your LinkedIn or Portfolio]
+Maintained and managed by Dima Levin - https://www.linkedin.com/in/dima-levin-y37/
