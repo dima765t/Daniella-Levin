@@ -80,26 +80,22 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 92px;
 }
 
 /* Logo */
-.logo-link { display: flex; align-items: center; }
-.logo { display: flex; flex-direction: column; gap: 1px; }
-.logo-name {
-  font-family: 'Heebo', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--brown);
-  line-height: 1.1;
+.logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
-.logo-sub {
-  font-size: 0.72rem;
-  color: var(--green);
-  letter-spacing: 0.04em;
-  font-weight: 400;
+.site-logo {
+  display: block;
+  height: 76px;
+  width: auto;
+  max-width: min(420px, 68vw);
+  object-fit: contain;
 }
-
 /* Nav */
 .main-nav ul {
   list-style: none;
@@ -236,7 +232,7 @@ h1, h2, h3, h4 {
   position: relative;
   z-index: 2;
   max-width: 620px;
-  padding-top: 72px; /* header height */
+  padding-top: 92px; /* header height */
 }
 
 .hero-tag {
@@ -633,12 +629,6 @@ h1, h2, h3, h4 {
   gap: 1.5rem;
 }
 
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
 .footer-nav {
   display: flex;
   gap: 2rem;
@@ -676,10 +666,10 @@ h1, h2, h3, h4 {
   .main-nav { display: none; }
   .hamburger { display: flex; }
 
-  .logo-name { font-size: 1.6rem; }
+  .site-logo { height: 66px; max-width: min(360px, 62vw); }
 
   .hero { min-height: 100svh; }
-  .hero-content { padding-top: 72px; }
+  .hero-content { padding-top: 92px; }
   .hero-desc br { display: none; }
 
   .intro-section,
@@ -715,8 +705,9 @@ h1, h2, h3, h4 {
 @media (max-width: 480px) {
   .container { padding: 0 1rem; }
 
-  .header-inner { height: 62px; }
-  .hero-content { padding-top: 62px; }
+  .header-inner { height: 78px; }
+  .site-logo { height: 60px; max-width: min(300px, 76vw); }
+  .hero-content { padding-top: 78px; }
 
   .hero-actions {
     flex-direction: column;

@@ -14,10 +14,7 @@
   <header class="main-header" id="header">
     <div class="header-inner container">
       <a href="index.html" class="logo-link">
-        <div class="logo">
-          <span class="logo-name">דניאלה לוין</span>
-          <span class="logo-sub">פסיכותרפיסטית הוליסטית</span>
-        </div>
+        <img src="images/daniella-dor-holistic-psychotherapist-logo.png" alt="דניאלה לוין — פסיכותרפיסטית הוליסטית" class="site-logo" />
       </a>
       <nav class="main-nav">
         <ul>
@@ -80,18 +77,32 @@
   <!-- ===== FILTERS ===== -->
   <section class="blog-filters-section">
     <div class="container">
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">הכל</button>
-        <button class="filter-btn" data-filter="trauma">טראומה וריפוי</button>
-        <button class="filter-btn" data-filter="holistic">הוליסטי</button>
-        <button class="filter-btn" data-filter="tools">כלים מעשיים</button>
-        <button class="filter-btn" data-filter="growth">צמיחה אישית</button>
+      <div class="blog-toolbar">
+        <div class="filter-bar-wrap">
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">הכל</button>
+            <button class="filter-btn" data-filter="trauma">טראומה וריפוי</button>
+            <button class="filter-btn" data-filter="holistic">הוליסטי</button>
+            <button class="filter-btn" data-filter="tools">כלים מעשיים</button>
+            <button class="filter-btn" data-filter="growth">צמיחה אישית</button>
+          </div>
+        </div>
+        <div class="view-toggle" role="group" aria-label="תצוגת מאמרים">
+          <button type="button" class="view-toggle-btn active" id="viewGrid" data-view="grid" aria-pressed="true" title="תצוגת רשת">
+            <span class="sr-only">תצוגת רשת</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+          </button>
+          <button type="button" class="view-toggle-btn" id="viewList" data-view="list" aria-pressed="false" title="תצוגת רשימה">
+            <span class="sr-only">תצוגת רשימה</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== BLOG GRID ===== -->
-  <section class="blog-grid-section">
+  <section class="blog-grid-section" id="blogGridSection">
     <div class="container">
       <div class="blog-grid">
 
@@ -262,10 +273,6 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo-name">דניאלה לוין</span>
-        <span class="logo-sub">פסיכותרפיסטית הוליסטית</span>
-      </div>
       <nav class="footer-nav">
         <a href="about.html">אודות</a>
         <a href="blog.html">בלוג</a>

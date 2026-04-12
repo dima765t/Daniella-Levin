@@ -31,6 +31,40 @@ filterBtns.forEach(btn => {
   });
 });
 
+// ── Grid / list view toggle ──
+const blogGridSection = document.getElementById('blogGridSection');
+const viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
+const VIEW_STORAGE_KEY = 'daniella-blog-view';
+
+if (blogGridSection && viewToggleBtns.length) {
+  function applyBlogView(view) {
+    const isList = view === 'list';
+    blogGridSection.classList.toggle('view-list', isList);
+    viewToggleBtns.forEach(b => {
+      const on = b.dataset.view === view;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try {
+      localStorage.setItem(VIEW_STORAGE_KEY, view);
+    } catch (_) {}
+  }
+
+  let savedView = null;
+  try {
+    const v = localStorage.getItem(VIEW_STORAGE_KEY);
+    if (v === 'list' || v === 'grid') savedView = v;
+  } catch (_) {}
+
+  if (savedView) applyBlogView(savedView);
+
+  viewToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyBlogView(btn.dataset.view);
+    });
+  });
+}
+
 // ── Scroll-reveal for blog cards ──
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
