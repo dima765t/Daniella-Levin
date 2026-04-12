@@ -92,8 +92,9 @@ h1, h2, h3, h4 {
 .site-logo {
   display: block;
   height: 76px;
+  max-height: 76px;
   width: auto;
-  max-width: min(420px, 68vw);
+  max-width: min(630px, calc(68vw * 1.5), 92vw);
   object-fit: contain;
 }
 /* Nav */
@@ -666,7 +667,7 @@ h1, h2, h3, h4 {
   .main-nav { display: none; }
   .hamburger { display: flex; }
 
-  .site-logo { height: 66px; max-width: min(360px, 62vw); }
+  .site-logo { height: 66px; max-height: 66px; max-width: min(540px, calc(62vw * 1.5), 92vw); }
 
   .hero { min-height: 100svh; }
   .hero-content { padding-top: 92px; }
@@ -706,7 +707,7 @@ h1, h2, h3, h4 {
   .container { padding: 0 1rem; }
 
   .header-inner { height: 78px; }
-  .site-logo { height: 60px; max-width: min(300px, 76vw); }
+  .site-logo { height: 60px; max-height: 60px; max-width: min(450px, calc(76vw * 1.5), 92vw); }
   .hero-content { padding-top: 78px; }
 
   .hero-actions {
