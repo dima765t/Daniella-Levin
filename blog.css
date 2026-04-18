@@ -4,7 +4,7 @@
 
 /* ── Active nav link ── */
 .active-nav {
-  color: var(--amber) !important;
+  color: var(--amber-text) !important; /* #7A5C1E: 4.93:1 on beige header — passes AA */
 }
 .active-nav::after {
   width: 100% !important;
@@ -71,7 +71,7 @@
   position: absolute;
   top: 1.4rem;
   right: 1.4rem;
-  background: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
   color: var(--white);
   font-size: 0.75rem;
   font-weight: 700;
@@ -104,7 +104,7 @@
 .btn-featured {
   display: inline-block;
   align-self: flex-start;
-  background: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
   color: var(--white);
   font-size: 0.95rem;
   font-weight: 600;
@@ -211,12 +211,12 @@
 }
 
 .view-toggle-btn:hover {
-  color: var(--amber);
+  color: var(--amber-accessible);
 }
 
 .view-toggle-btn.active {
   background: var(--white);
-  color: var(--amber);
+  color: var(--amber-accessible); /* 4.91:1 on white — passes AA */
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
@@ -246,12 +246,12 @@
 }
 .filter-btn:hover {
   background: var(--amber-pale);
-  border-color: var(--amber);
-  color: var(--amber);
+  border-color: var(--amber-accessible);
+  color: var(--amber-accessible);
 }
 .filter-btn.active {
-  background: var(--amber);
-  border-color: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
+  border-color: var(--amber-accessible);
   color: var(--white);
   font-weight: 600;
 }
@@ -320,7 +320,7 @@
   color: inherit;
   transition: color var(--transition);
 }
-.blog-card-title a:hover { color: var(--amber); }
+.blog-card-title a:hover { color: var(--amber-accessible); }
 
 .blog-card-excerpt {
   font-size: 0.9rem;
@@ -341,7 +341,7 @@
 .read-more {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--amber);
+  color: var(--amber-text); /* #7A5C1E: 6.07:1 on white — passes AA */
   transition: color var(--transition), gap var(--transition);
   display: inline-flex;
   align-items: center;
@@ -357,8 +357,8 @@
 
 .btn-load-more {
   background: transparent;
-  border: 2px solid var(--amber);
-  color: var(--amber);
+  border: 2px solid var(--amber-accessible);
+  color: var(--amber-text); /* #7A5C1E: 6.07:1 on white — passes AA */
   font-family: 'Heebo', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
@@ -368,7 +368,7 @@
   transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 .btn-load-more:hover {
-  background: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
   color: var(--white);
   transform: translateY(-2px);
 }

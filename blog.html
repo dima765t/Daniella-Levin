@@ -10,47 +10,56 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-to-content">דלג לתוכן הראשי</a>
+
   <!-- ===== HEADER / NAV ===== -->
   <header class="main-header" id="header">
     <div class="header-inner container">
-      <a href="index.html" class="logo-link">
+      <a href="index.html" class="logo-link" aria-label="עמוד הבית — דניאלה לוין">
         <img src="images/daniella-dor-holistic-psychotherapist-logo.png" alt="דניאלה לוין — פסיכותרפיסטית הוליסטית" class="site-logo" />
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="ניווט ראשי">
         <ul>
           <li><a href="about.html" class="nav-link">אודות</a></li>
-          <li><a href="blog.html" class="nav-link active-nav">בלוג</a></li>
+          <li><a href="blog.html" class="nav-link active-nav" aria-current="page">בלוג</a></li>
           <li><a href="podcast.html" class="nav-link">פודקאסט</a></li>
           <li><a href="lectures.html" class="nav-link">הרצאות</a></li>
           <li><a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta">קבעו פגישה</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="תפריט">
-        <span></span><span></span><span></span>
+      <button class="hamburger" id="hamburger"
+              aria-label="פתיחת תפריט ניווט"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="ניווט נייד" hidden>
       <ul>
         <li><a href="about.html">אודות</a></li>
-        <li><a href="blog.html">בלוג</a></li>
+        <li><a href="blog.html" aria-current="page">בלוג</a></li>
         <li><a href="podcast.html">פודקאסט</a></li>
         <li><a href="lectures.html">הרצאות</a></li>
         <li><a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta-mobile">קבעו פגישה</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
+  <main id="main-content">
+
   <!-- ===== PAGE HERO ===== -->
-  <section class="page-hero">
+  <section class="page-hero" aria-labelledby="blog-page-heading">
     <div class="container page-hero-inner">
       <span class="section-tag">מחשבות, תובנות וכלים</span>
-      <h1 class="page-hero-title">הבלוג שלי</h1>
+      <h1 class="page-hero-title" id="blog-page-heading">הבלוג שלי</h1>
       <p class="page-hero-desc">מאמרים, תובנות וכלים מעשיים לריפוי, צמיחה ואיזון נפשי-גופני</p>
     </div>
   </section>
 
   <!-- ===== FEATURED POST ===== -->
-  <section class="featured-section">
+  <section class="featured-section" aria-label="מאמר נבחר">
     <div class="container">
       <div class="featured-card">
         <div class="featured-image featured-image--1">
@@ -68,23 +77,23 @@
             ומשפיעה על כל תחומי החיים. במאמר זה נבין מה קורה לנו ברמה הנוירולוגית, ומדוע ריפוי
             אמיתי מתחיל בהכרה בדפוסים שנוצרו בעבר.
           </p>
-          <a href="#" class="btn-featured">קראו את המאמר המלא</a>
+          <a href="#" class="btn-featured" aria-label="קראו את המאמר המלא — כיצד טראומה לא פתורה משפיעה על הגוף, הנפש והמחשבה">קראו את המאמר המלא</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== FILTERS ===== -->
-  <section class="blog-filters-section">
+  <section class="blog-filters-section" aria-label="סינון מאמרים">
     <div class="container">
       <div class="blog-toolbar">
         <div class="filter-bar-wrap">
-          <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">הכל</button>
-            <button class="filter-btn" data-filter="trauma">טראומה וריפוי</button>
-            <button class="filter-btn" data-filter="holistic">הוליסטי</button>
-            <button class="filter-btn" data-filter="tools">כלים מעשיים</button>
-            <button class="filter-btn" data-filter="growth">צמיחה אישית</button>
+          <div class="filter-bar" role="group" aria-label="סינון לפי קטגוריה">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">הכל</button>
+            <button class="filter-btn" data-filter="trauma" aria-pressed="false">טראומה וריפוי</button>
+            <button class="filter-btn" data-filter="holistic" aria-pressed="false">הוליסטי</button>
+            <button class="filter-btn" data-filter="tools" aria-pressed="false">כלים מעשיים</button>
+            <button class="filter-btn" data-filter="growth" aria-pressed="false">צמיחה אישית</button>
           </div>
         </div>
         <div class="view-toggle" role="group" aria-label="תצוגת מאמרים">
@@ -102,13 +111,13 @@
   </section>
 
   <!-- ===== BLOG GRID ===== -->
-  <section class="blog-grid-section" id="blogGridSection">
+  <section class="blog-grid-section" id="blogGridSection" aria-label="מאמרים">
     <div class="container">
       <div class="blog-grid">
 
         <!-- Card 1 -->
         <article class="blog-card" data-category="tools">
-          <a href="#" class="blog-card-image-link">
+          <a href="#" class="blog-card-image-link" aria-hidden="true" tabindex="-1">
             <div class="blog-card-image blog-card-image--2"></div>
           </a>
           <div class="blog-card-body">
@@ -125,14 +134,14 @@
             </p>
             <div class="blog-card-footer">
               <span class="post-read">4 דקות קריאה</span>
-              <a href="#" class="read-more">קראו עוד ←</a>
+              <a href="#" class="read-more" aria-label="קראו עוד על 5 כלים להתמודדות עם חרדה יומיומית">קראו עוד ←</a>
             </div>
           </div>
         </article>
 
         <!-- Card 2 -->
         <article class="blog-card" data-category="holistic">
-          <a href="#" class="blog-card-image-link">
+          <a href="#" class="blog-card-image-link" aria-hidden="true" tabindex="-1">
             <div class="blog-card-image blog-card-image--3"></div>
           </a>
           <div class="blog-card-body">
@@ -149,14 +158,14 @@
             </p>
             <div class="blog-card-footer">
               <span class="post-read">5 דקות קריאה</span>
-              <a href="#" class="read-more">קראו עוד ←</a>
+              <a href="#" class="read-more" aria-label="קראו עוד על הילינג הוליסטי ואיך הוא שונה מטיפול רגיל">קראו עוד ←</a>
             </div>
           </div>
         </article>
 
         <!-- Card 3 -->
         <article class="blog-card" data-category="growth">
-          <a href="#" class="blog-card-image-link">
+          <a href="#" class="blog-card-image-link" aria-hidden="true" tabindex="-1">
             <div class="blog-card-image blog-card-image--4"></div>
           </a>
           <div class="blog-card-body">
@@ -173,14 +182,14 @@
             </p>
             <div class="blog-card-footer">
               <span class="post-read">3 דקות קריאה</span>
-              <a href="#" class="read-more">קראו עוד ←</a>
+              <a href="#" class="read-more" aria-label="קראו עוד על הקושי לבקש עזרה">קראו עוד ←</a>
             </div>
           </div>
         </article>
 
         <!-- Card 4 -->
         <article class="blog-card" data-category="trauma">
-          <a href="#" class="blog-card-image-link">
+          <a href="#" class="blog-card-image-link" aria-hidden="true" tabindex="-1">
             <div class="blog-card-image blog-card-image--5"></div>
           </a>
           <div class="blog-card-body">
@@ -197,14 +206,14 @@
             </p>
             <div class="blog-card-footer">
               <span class="post-read">7 דקות קריאה</span>
-              <a href="#" class="read-more">קראו עוד ←</a>
+              <a href="#" class="read-more" aria-label="קראו עוד על ריפוי פצעי ילדות">קראו עוד ←</a>
             </div>
           </div>
         </article>
 
         <!-- Card 5 -->
         <article class="blog-card" data-category="holistic">
-          <a href="#" class="blog-card-image-link">
+          <a href="#" class="blog-card-image-link" aria-hidden="true" tabindex="-1">
             <div class="blog-card-image blog-card-image--6"></div>
           </a>
           <div class="blog-card-body">
@@ -221,14 +230,14 @@
             </p>
             <div class="blog-card-footer">
               <span class="post-read">5 דקות קריאה</span>
-              <a href="#" class="read-more">קראו עוד ←</a>
+              <a href="#" class="read-more" aria-label="קראו עוד על הקשר בין ציורים לעולם הפנימי">קראו עוד ←</a>
             </div>
           </div>
         </article>
 
         <!-- Card 6 -->
         <article class="blog-card" data-category="tools">
-          <a href="#" class="blog-card-image-link">
+          <a href="#" class="blog-card-image-link" aria-hidden="true" tabindex="-1">
             <div class="blog-card-image blog-card-image--1"></div>
           </a>
           <div class="blog-card-body">
@@ -245,7 +254,7 @@
             </p>
             <div class="blog-card-footer">
               <span class="post-read">4 דקות קריאה</span>
-              <a href="#" class="read-more">קראו עוד ←</a>
+              <a href="#" class="read-more" aria-label="קראו עוד על נשימה מודעת כתרופה">קראו עוד ←</a>
             </div>
           </div>
         </article>
@@ -260,24 +269,27 @@
   </section>
 
   <!-- ===== NEWSLETTER / CTA ===== -->
-  <section class="cta-banner">
+  <section class="cta-banner" aria-labelledby="blog-cta-heading">
     <div class="container cta-inner">
       <div class="cta-text">
-        <h3>רוצים לשמוע עוד?</h3>
+        <h2 id="blog-cta-heading">רוצים לשמוע עוד?</h2>
         <p>צרו קשר לפגישת היכרות ללא עלות</p>
       </div>
       <a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta-large">קבעו פגישה עכשיו</a>
     </div>
   </section>
 
+  </main>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="ניווט תחתון">
         <a href="about.html">אודות</a>
-        <a href="blog.html">בלוג</a>
+        <a href="blog.html" aria-current="page">בלוג</a>
         <a href="podcast.html">פודקאסט</a>
         <a href="contact.html">צור קשר</a>
+        <a href="accessibility.html">הצהרת נגישות</a>
       </nav>
       <p class="footer-copy">© כל הזכויות שמורות לדניאלה לוין 2025</p>
     </div>

@@ -9,13 +9,15 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-to-content">דלג לתוכן הראשי</a>
+
   <!-- ===== HEADER / NAV ===== -->
   <header class="main-header" id="header">
     <div class="header-inner container">
-      <a href="index.html" class="logo-link">
+      <a href="index.html" class="logo-link" aria-label="עמוד הבית — דניאלה לוין">
         <img src="images/daniella-dor-holistic-psychotherapist-logo.png" alt="דניאלה לוין — פסיכותרפיסטית הוליסטית" class="site-logo" />
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="ניווט ראשי">
         <ul>
           <li><a href="about.html" class="nav-link">אודות</a></li>
           <li><a href="blog.html" class="nav-link">בלוג</a></li>
@@ -24,12 +26,17 @@
           <li><a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta">קבעו פגישה</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="תפריט">
-        <span></span><span></span><span></span>
+      <button class="hamburger" id="hamburger"
+              aria-label="פתיחת תפריט ניווט"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </div>
     <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="ניווט נייד" hidden>
       <ul>
         <li><a href="about.html">אודות</a></li>
         <li><a href="blog.html">בלוג</a></li>
@@ -37,137 +44,142 @@
         <li><a href="lectures.html">הרצאות</a></li>
         <li><a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta-mobile">קבעו פגישה</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-image-wrap">
-      <img src="image.png" alt="חדר טיפולים" class="hero-img" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content container">
-      <p class="hero-tag animate-up delay-1">מרחב בטוח לריפוי ולצמיחה</p>
-      <h1 class="hero-title animate-up delay-2">דניאלה לוין</h1>
-      <h2 class="hero-subtitle animate-up delay-3">פסיכותרפיסטית הוליסטית</h2>
-      <p class="hero-desc animate-up delay-4">
-        מרחב בטוח להבין את ההשפעות של טראומה לא פתורה<br>בגוף, בנפש ובמחשבה.
-      </p>
-      <div class="hero-actions animate-up delay-5">
-        <a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-hero">קבעו פגישה</a>
-        <a href="about.html" class="btn-hero-ghost">הכירו אותי</a>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span class="scroll-line"></span>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- ===== INTRO / ABOUT STRIP ===== -->
-  <section class="intro-section">
-    <div class="container intro-grid">
-      <div class="intro-deco">
-        <div class="deco-circle"></div>
-        <div class="deco-leaf">🌿</div>
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-label="כותרת ראשית">
+      <div class="hero-image-wrap" aria-hidden="true">
+        <img src="image.png" alt="" class="hero-img" />
+        <div class="hero-overlay"></div>
       </div>
-      <div class="intro-text">
-        <span class="section-tag">אודות</span>
-        <h3 class="section-title">שלום, אני דניאלה</h3>
-        <p>
-          מטפלת הוליסטית ופסיכותרפיסטית, ואני מזמינה אותך לתהליך טיפולי אישי ורגיש.
-          יחד נמצא את האיזון הפנימי שלך, נתמודד עם חסמים רגשיים ונוביל אותך לצמיחה
-          ולהתפתחות משמעותית בחייך.
+      <div class="hero-content container">
+        <p class="hero-tag animate-up delay-1">מרחב בטוח לריפוי ולצמיחה</p>
+        <h1 class="hero-title animate-up delay-2">דניאלה לוין</h1>
+        <h2 class="hero-subtitle animate-up delay-3">פסיכותרפיסטית הוליסטית</h2>
+        <p class="hero-desc animate-up delay-4">
+          מרחב בטוח להבין את ההשפעות של טראומה לא פתורה<br>בגוף, בנפש ובמחשבה.
         </p>
-        <a href="about.html" class="btn-text">קראו עוד ←</a>
+        <div class="hero-actions animate-up delay-5">
+          <a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-hero">קבעו פגישה</a>
+          <a href="about.html" class="btn-hero-ghost">הכירו אותי</a>
+        </div>
       </div>
-    </div>
-  </section>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="scroll-line"></span>
+      </div>
+    </section>
 
-  <!-- ===== SERVICES ===== -->
-  <section class="services-section">
-    <div class="container">
-      <span class="section-tag centered">תחומי טיפול</span>
-      <h3 class="section-title centered">במה אני יכולה לעזור</h3>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🌱</div>
-          <h4>טיפול בטראומה</h4>
-          <p>ריפוי עמוק של פצעי עבר תוך שיקום עצמי ובניית חוסן.</p>
+    <!-- ===== INTRO / ABOUT STRIP ===== -->
+    <section class="intro-section" aria-labelledby="intro-heading">
+      <div class="container intro-grid">
+        <div class="intro-deco" aria-hidden="true">
+          <div class="deco-circle"></div>
+          <div class="deco-leaf">🌿</div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🧘</div>
-          <h4>הילינג הוליסטי</h4>
-          <p>שילוב גוף-נפש-רוח לאיזון כולל ושחרור מתחים מצטברים.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🎨</div>
-          <h4>אבחון ציורים</h4>
-          <p>כלי ייחודי לאבחון ולהבנת עולמות פנימיים דרך שפה חזותית.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">💛</div>
-          <h4>ליווי אישי</h4>
-          <p>תהליך מותאם אישית לצמיחה, שינוי והתפתחות עצמית.</p>
+        <div class="intro-text">
+          <span class="section-tag">אודות</span>
+          <h3 class="section-title" id="intro-heading">שלום, אני דניאלה</h3>
+          <p>
+            מטפלת הוליסטית ופסיכותרפיסטית, ואני מזמינה אותך לתהליך טיפולי אישי ורגיש.
+            יחד נמצא את האיזון הפנימי שלך, נתמודד עם חסמים רגשיים ונוביל אותך לצמיחה
+            ולהתפתחות משמעותית בחייך.
+          </p>
+          <a href="about.html" class="btn-text">קראו עוד ←</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="testimonials-section">
-    <div class="container">
-      <span class="section-tag centered">המלצות</span>
-      <h3 class="section-title centered">מה אומרים המטופלים</h3>
-      <div class="carousel-wrap">
-        <div class="carousel" id="carousel">
-          <div class="testimonial active">
-            <div class="quote-mark">"</div>
-            <p>דניאלה עזרה לי לעבור תקופה קשה מאוד, ומאז החיים שלי השתנו לחלוטין. הגישה שלה חמה ומקצועית בו זמנית.</p>
-            <span class="t-name">— רונית ש.</span>
+    <!-- ===== SERVICES ===== -->
+    <section class="services-section" aria-labelledby="services-heading">
+      <div class="container">
+        <span class="section-tag centered">תחומי טיפול</span>
+        <h3 class="section-title centered" id="services-heading">במה אני יכולה לעזור</h3>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">🌱</div>
+            <h4>טיפול בטראומה</h4>
+            <p>ריפוי עמוק של פצעי עבר תוך שיקום עצמי ובניית חוסן.</p>
           </div>
-          <div class="testimonial">
-            <div class="quote-mark">"</div>
-            <p>הטיפול איתה היה מקצועי, אמפתי ומרפא. ממליצה בחום לכל מי שמחפש שינוי אמיתי.</p>
-            <span class="t-name">— אייל מ.</span>
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">🧘</div>
+            <h4>הילינג הוליסטי</h4>
+            <p>שילוב גוף-נפש-רוח לאיזון כולל ושחרור מתחים מצטברים.</p>
           </div>
-          <div class="testimonial">
-            <div class="quote-mark">"</div>
-            <p>שילוב של טיפול עמוק עם כלים הוליסטיים ייחודיים. חוויה שממש משנה חיים.</p>
-            <span class="t-name">— ליאת ג.</span>
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">🎨</div>
+            <h4>אבחון ציורים</h4>
+            <p>כלי ייחודי לאבחון ולהבנת עולמות פנימיים דרך שפה חזותית.</p>
           </div>
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-btn" onclick="prevSlide()" aria-label="הקודם">&#x2039;</button>
-          <div class="carousel-dots" id="dots">
-            <span class="dot active" onclick="setSlide(0)"></span>
-            <span class="dot" onclick="setSlide(1)"></span>
-            <span class="dot" onclick="setSlide(2)"></span>
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">💛</div>
+            <h4>ליווי אישי</h4>
+            <p>תהליך מותאם אישית לצמיחה, שינוי והתפתחות עצמית.</p>
           </div>
-          <button class="carousel-btn" onclick="nextSlide()" aria-label="הבא">&#x203a;</button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== CTA BANNER ===== -->
-  <section class="cta-banner">
-    <div class="container cta-inner">
-      <div class="cta-text">
-        <h3>מוכנים להתחיל?</h3>
-        <p>צרו קשר לפגישת היכרות ללא עלות</p>
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <span class="section-tag centered">המלצות</span>
+        <h3 class="section-title centered" id="testimonials-heading">מה אומרים המטופלים</h3>
+        <div class="carousel-wrap">
+          <div class="carousel" id="carousel" aria-live="polite" aria-atomic="true">
+            <div class="testimonial active" aria-hidden="false">
+              <div class="quote-mark" aria-hidden="true">"</div>
+              <p>דניאלה עזרה לי לעבור תקופה קשה מאוד, ומאז החיים שלי השתנו לחלוטין. הגישה שלה חמה ומקצועית בו זמנית.</p>
+              <span class="t-name">— רונית ש.</span>
+            </div>
+            <div class="testimonial" aria-hidden="true">
+              <div class="quote-mark" aria-hidden="true">"</div>
+              <p>הטיפול איתה היה מקצועי, אמפתי ומרפא. ממליצה בחום לכל מי שמחפש שינוי אמיתי.</p>
+              <span class="t-name">— אייל מ.</span>
+            </div>
+            <div class="testimonial" aria-hidden="true">
+              <div class="quote-mark" aria-hidden="true">"</div>
+              <p>שילוב של טיפול עמוק עם כלים הוליסטיים ייחודיים. חוויה שממש משנה חיים.</p>
+              <span class="t-name">— ליאת ג.</span>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" onclick="prevSlide()" aria-label="המלצה קודמת">&#x2039;</button>
+            <div class="carousel-dots" id="dots" role="group" aria-label="בחירת המלצה">
+              <button class="dot active" onclick="setSlide(0)" aria-label="המלצה 1" aria-pressed="true"></button>
+              <button class="dot" onclick="setSlide(1)" aria-label="המלצה 2" aria-pressed="false"></button>
+              <button class="dot" onclick="setSlide(2)" aria-label="המלצה 3" aria-pressed="false"></button>
+            </div>
+            <button class="carousel-btn" onclick="nextSlide()" aria-label="המלצה הבאה">&#x203a;</button>
+          </div>
+        </div>
       </div>
-      <a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta-large">קבעו פגישה עכשיו</a>
-    </div>
-  </section>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h3 id="cta-heading">מוכנים להתחיל?</h3>
+          <p>צרו קשר לפגישת היכרות ללא עלות</p>
+        </div>
+        <a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta-large">קבעו פגישה עכשיו</a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="ניווט תחתון">
         <a href="about.html">אודות</a>
         <a href="blog.html">בלוג</a>
         <a href="podcast.html">פודקאסט</a>
         <a href="contact.html">צור קשר</a>
+        <a href="accessibility.html">הצהרת נגישות</a>
       </nav>
       <p class="footer-copy">© כל הזכויות שמורות לדניאלה לוין 2025</p>
     </div>

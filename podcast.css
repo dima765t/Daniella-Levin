@@ -4,7 +4,7 @@
 
 /* ── Active nav link ── */
 .active-nav {
-  color: var(--amber) !important;
+  color: var(--amber-text) !important; /* #7A5C1E: 4.93:1 on beige header — passes AA */
 }
 .active-nav::after {
   width: 100% !important;
@@ -141,7 +141,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   background: var(--amber-pale);
-  color: var(--amber);
+  color: var(--amber-text); /* #7A5C1E: 5.53:1 on amber-pale — passes AA */
   border: 1px solid rgba(200,147,58,0.3);
   padding: 0.2rem 0.7rem;
   border-radius: 50px;
@@ -177,7 +177,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
   color: var(--white);
   font-size: 0.92rem;
   font-weight: 600;
@@ -294,7 +294,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  background: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
   color: var(--white);
   font-size: 0.82rem;
   font-weight: 600;

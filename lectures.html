@@ -10,58 +10,67 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-to-content">דלג לתוכן הראשי</a>
+
   <!-- ===== HEADER / NAV ===== -->
   <header class="main-header" id="header">
     <div class="header-inner container">
-      <a href="index.html" class="logo-link">
+      <a href="index.html" class="logo-link" aria-label="עמוד הבית — דניאלה לוין">
         <img src="images/daniella-dor-holistic-psychotherapist-logo.png" alt="דניאלה לוין — פסיכותרפיסטית הוליסטית" class="site-logo" />
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="ניווט ראשי">
         <ul>
           <li><a href="about.html" class="nav-link">אודות</a></li>
           <li><a href="blog.html" class="nav-link">בלוג</a></li>
           <li><a href="podcast.html" class="nav-link">פודקאסט</a></li>
-          <li><a href="lectures.html" class="nav-link active-nav">הרצאות</a></li>
+          <li><a href="lectures.html" class="nav-link active-nav" aria-current="page">הרצאות</a></li>
           <li><a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta">קבעו פגישה</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="תפריט">
-        <span></span><span></span><span></span>
+      <button class="hamburger" id="hamburger"
+              aria-label="פתיחת תפריט ניווט"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="ניווט נייד" hidden>
       <ul>
         <li><a href="about.html">אודות</a></li>
         <li><a href="blog.html">בלוג</a></li>
         <li><a href="podcast.html">פודקאסט</a></li>
-        <li><a href="lectures.html">הרצאות</a></li>
+        <li><a href="lectures.html" aria-current="page">הרצאות</a></li>
         <li><a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta-mobile">קבעו פגישה</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
+  <main id="main-content">
+
   <!-- ===== PAGE HERO ===== -->
-  <section class="page-hero">
+  <section class="page-hero" aria-labelledby="lectures-page-heading">
     <div class="container page-hero-inner">
       <span class="section-tag">במה, הרצאות וכנסים</span>
-      <h1 class="page-hero-title">הרצאות</h1>
+      <h1 class="page-hero-title" id="lectures-page-heading">הרצאות</h1>
       <p class="page-hero-desc">הרצאות וסדנאות על טראומה, ריפוי הוליסטי וצמיחה אישית — לארגונים, כנסים ואירועים פרטיים</p>
     </div>
   </section>
 
   <!-- ===== TABS ===== -->
-  <section class="lectures-tabs-section">
+  <section class="lectures-tabs-section" aria-label="סינון הרצאות">
     <div class="container">
-      <div class="lectures-tabs">
-        <button class="tab-btn active" data-tab="all">הכל</button>
-        <button class="tab-btn" data-tab="past">הרצאות שהיו</button>
-        <button class="tab-btn" data-tab="upcoming">הרצאות קרובות</button>
+      <div class="lectures-tabs" role="tablist" aria-label="סינון הרצאות לפי סוג">
+        <button class="tab-btn active" data-tab="all" role="tab" id="tab-all" aria-selected="true" tabindex="0" aria-controls="lectures-tabpanel">הכל</button>
+        <button class="tab-btn" data-tab="past" role="tab" id="tab-past" aria-selected="false" tabindex="-1" aria-controls="lectures-tabpanel">הרצאות שהיו</button>
+        <button class="tab-btn" data-tab="upcoming" role="tab" id="tab-upcoming" aria-selected="false" tabindex="-1" aria-controls="lectures-tabpanel">הרצאות קרובות</button>
       </div>
     </div>
   </section>
 
   <!-- ===== LECTURES GRID ===== -->
-  <section class="lectures-grid-section">
+  <section class="lectures-grid-section" id="lectures-tabpanel" role="tabpanel" aria-labelledby="tab-all" tabindex="0">
     <div class="container">
       <div class="lectures-grid">
 
@@ -71,7 +80,7 @@
             <span class="lecture-badge upcoming-badge">בקרוב</span>
             <div class="lecture-thumb-overlay">
               <a href="#" class="btn-ticket" target="_blank" rel="noopener">
-                🎟 רכשו כרטיס
+                <span aria-hidden="true">🎟</span> רכשו כרטיס
               </a>
             </div>
           </div>
@@ -82,7 +91,7 @@
             </div>
             <h3 class="lecture-title">טראומה בגוף: כיצד הגוף זוכר מה השכחנו</h3>
             <p class="lecture-location">
-              <span class="loc-icon">📍</span> תל אביב — בית ציוני אמריקה
+              <span class="loc-icon" aria-hidden="true">📍</span> תל אביב — בית ציוני אמריקה
             </p>
             <p class="lecture-desc">
               הרצאה על הקשר עמוק בין זיכרון גופני לטראומה רגשית — ואיך ניתן לפנות לגוף כשותף בתהליך הריפוי.
@@ -97,7 +106,7 @@
             <span class="lecture-badge upcoming-badge">בקרוב</span>
             <div class="lecture-thumb-overlay">
               <a href="#" class="btn-ticket" target="_blank" rel="noopener">
-                🎟 רכשו כרטיס
+                <span aria-hidden="true">🎟</span> רכשו כרטיס
               </a>
             </div>
           </div>
@@ -108,7 +117,7 @@
             </div>
             <h3 class="lecture-title">מציאת האיזון — מפגש גוף, נפש ורוח</h3>
             <p class="lecture-location">
-              <span class="loc-icon">📍</span> ירושלים — מכון ון ליר
+              <span class="loc-icon" aria-hidden="true">📍</span> ירושלים — מכון ון ליר
             </p>
             <p class="lecture-desc">
               סדנת הרצאה אינטראקטיבית המשלבת כלים מהגישה ההוליסטית לאיזון פנימי, הפחתת לחץ ושחרור מתחים.
@@ -134,7 +143,7 @@
             </div>
             <h3 class="lecture-title">שחרור דפוסים ישנים: המפתח לשינוי אמיתי</h3>
             <p class="lecture-location">
-              <span class="loc-icon">📍</span> חיפה — אוניברסיטת חיפה
+              <span class="loc-icon" aria-hidden="true">📍</span> חיפה — אוניברסיטת חיפה
             </p>
             <p class="lecture-desc">
               הרצאה על דפוסי התנהגות שנוצרים בעקבות טראומה, כיצד הם מגינים עלינו ומה נדרש כדי לשחרר אותם בבטחה.
@@ -160,7 +169,7 @@
             </div>
             <h3 class="lecture-title">אבחון דרך ציור — כשהתמונה מספרת יותר ממילים</h3>
             <p class="lecture-location">
-              <span class="loc-icon">📍</span> תל אביב — כנס פסיכותרפיה הוליסטית 2025
+              <span class="loc-icon" aria-hidden="true">📍</span> תל אביב — כנס פסיכותרפיה הוליסטית 2025
             </p>
             <p class="lecture-desc">
               הצגת שיטת האבחון הציורי ככלי פסיכותרפי: כיצד ציורים חושפים עולמות פנימיים שקשה להגיע אליהם בדיבור.
@@ -186,7 +195,7 @@
             </div>
             <h3 class="lecture-title">ריפוי פצעי ילדות — מאיפה מתחילים</h3>
             <p class="lecture-location">
-              <span class="loc-icon">📍</span> רמת גן — מרכז רפואי שיבא, יום עיון
+              <span class="loc-icon" aria-hidden="true">📍</span> רמת גן — מרכז רפואי שיבא, יום עיון
             </p>
             <p class="lecture-desc">
               הרצאה המיועדת לאנשי מקצוע ולציבור הרחב על גישות מוכחות לריפוי פצעי ילדות ועל תפקיד הגוף בתהליך.
@@ -212,7 +221,7 @@
             </div>
             <h3 class="lecture-title">מה זה בעצם הילינג? — מיסטיקה, מדע ומציאות</h3>
             <p class="lecture-location">
-              <span class="loc-icon">📍</span> תל אביב — פסטיבל הוליסטיקה 2024
+              <span class="loc-icon" aria-hidden="true">📍</span> תל אביב — פסטיבל הוליסטיקה 2024
             </p>
             <p class="lecture-desc">
               הרצאה המפגישה בין הגישה ההוליסטית לממצאים מדעיים עדכניים, ומבהירה מה אנחנו יודעים ומה עדיין לא יודעים על ריפוי.
@@ -226,25 +235,28 @@
   </section>
 
   <!-- ===== CTA BANNER ===== -->
-  <section class="cta-banner">
+  <section class="cta-banner" aria-labelledby="lectures-cta-heading">
     <div class="container cta-inner">
       <div class="cta-text">
-        <h3>רוצים להזמין הרצאה?</h3>
+        <h2 id="lectures-cta-heading">רוצים להזמין הרצאה?</h2>
         <p>אני מרצה בארגונים, כנסים ואירועים פרטיים — צרו קשר לפרטים</p>
       </div>
       <a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%96%D7%9E%D7%A0%D7%AA%20%D7%94%D7%A8%D7%A6%D7%90%D7%94." target="_blank" rel="noopener" class="btn-cta-large">צרו קשר עכשיו</a>
     </div>
   </section>
 
+  </main>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="ניווט תחתון">
         <a href="about.html">אודות</a>
         <a href="blog.html">בלוג</a>
         <a href="podcast.html">פודקאסט</a>
-        <a href="lectures.html">הרצאות</a>
+        <a href="lectures.html" aria-current="page">הרצאות</a>
         <a href="contact.html">צור קשר</a>
+        <a href="accessibility.html">הצהרת נגישות</a>
       </nav>
       <p class="footer-copy">© כל הזכויות שמורות לדניאלה לוין 2025</p>
     </div>

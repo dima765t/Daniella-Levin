@@ -4,7 +4,7 @@
 
 /* ── Active nav link ── */
 .active-nav {
-  color: var(--amber) !important;
+  color: var(--amber-text) !important; /* #7A5C1E: 4.93:1 on beige header — passes AA */
 }
 .active-nav::after {
   width: 100% !important;
@@ -65,12 +65,12 @@
 }
 .tab-btn:hover {
   background: var(--amber-pale);
-  border-color: var(--amber);
-  color: var(--amber);
+  border-color: var(--amber-accessible);
+  color: var(--amber-accessible);
 }
 .tab-btn.active {
-  background: var(--amber);
-  border-color: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
+  border-color: var(--amber-accessible);
   color: var(--white);
   font-weight: 600;
 }
@@ -155,7 +155,7 @@
 
 /* Ticket button for upcoming lectures */
 .btn-ticket {
-  background: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
   color: var(--white);
   font-family: 'Heebo', sans-serif;
   font-size: 0.95rem;
@@ -167,7 +167,7 @@
   white-space: nowrap;
 }
 .btn-ticket:hover {
-  background: var(--amber-light);
+  background: var(--green); /* --amber-light gives only 1.89:1 with white text */
   transform: scale(1.05);
 }
 
@@ -188,7 +188,7 @@
   color: var(--white);
 }
 .upcoming-badge {
-  background: var(--amber);
+  background: var(--amber-accessible); /* 4.91:1 vs white — passes AA */
   color: var(--white);
 }
 
@@ -276,11 +276,11 @@
   color: var(--green);
 }
 .btn-watch:hover {
-  color: var(--amber);
+  color: var(--amber-accessible);
   gap: 0.6rem;
 }
 .btn-ticket-full {
-  color: var(--amber);
+  color: var(--amber-text); /* #7A5C1E: 6.07:1 on white — passes AA */
 }
 .btn-ticket-full:hover {
   color: var(--green);

@@ -10,222 +10,234 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-to-content">דלג לתוכן הראשי</a>
+
   <!-- ===== HEADER / NAV ===== -->
   <header class="main-header" id="header">
     <div class="header-inner container">
-      <a href="index.html" class="logo-link">
+      <a href="index.html" class="logo-link" aria-label="עמוד הבית — דניאלה לוין">
         <img src="images/daniella-dor-holistic-psychotherapist-logo.png" alt="דניאלה לוין — פסיכותרפיסטית הוליסטית" class="site-logo" />
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="ניווט ראשי">
         <ul>
-          <li><a href="about.html" class="nav-link active-nav">אודות</a></li>
+          <li><a href="about.html" class="nav-link active-nav" aria-current="page">אודות</a></li>
           <li><a href="blog.html" class="nav-link">בלוג</a></li>
           <li><a href="podcast.html" class="nav-link">פודקאסט</a></li>
           <li><a href="lectures.html" class="nav-link">הרצאות</a></li>
           <li><a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta">קבעו פגישה</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="תפריט">
-        <span></span><span></span><span></span>
+      <button class="hamburger" id="hamburger"
+              aria-label="פתיחת תפריט ניווט"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="ניווט נייד" hidden>
       <ul>
-        <li><a href="about.html">אודות</a></li>
+        <li><a href="about.html" aria-current="page">אודות</a></li>
         <li><a href="blog.html">בלוג</a></li>
         <li><a href="podcast.html">פודקאסט</a></li>
         <li><a href="lectures.html">הרצאות</a></li>
         <li><a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94." target="_blank" rel="noopener" class="btn-cta-mobile">קבעו פגישה</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <!-- ===== HERO — full viewport portrait ===== -->
-  <section class="about-hero">
-    <div class="about-hero-img-wrap">
-      <img src="IMG_0584.jpeg" alt="דניאלה לוין" class="about-hero-img" id="heroImg" />
-      <div class="about-hero-overlay"></div>
-    </div>
-    <div class="about-hero-content">
-      <p class="about-hero-tag reveal-line">פסיכותרפיסטית הוליסטית</p>
-      <h1 class="about-hero-name reveal-line delay-1">דניאלה לוין</h1>
-      <p class="about-hero-sub reveal-line delay-2">מרחב בטוח לריפוי, לצמיחה ולחיים שלמים יותר</p>
-    </div>
-    <div class="about-hero-scroll">
-      <span class="scroll-line"></span>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- ===== BIG STATEMENT ===== -->
-  <section class="statement-section">
-    <div class="container">
-      <p class="statement-text split-reveal">
-        אני מאמינה שכל אדם נושא בתוכו<br class="br-desktop" />
-        את הכוח לרפא את עצמו —<br class="br-desktop" />
-        <em>לפעמים הוא פשוט צריך מישהי לצדו.</em>
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== STORY — sticky image + scrolling text ===== -->
-  <section class="story-section">
-    <div class="story-inner container">
-
-      <div class="story-sticky-col">
-        <div class="story-sticky-img-wrap">
-          <img src="images/daniella-dor-holistic-therapist-about.jpg" alt="דניאלה בסביבת העבודה" class="story-img" />
-        </div>
+    <!-- ===== HERO — full viewport portrait ===== -->
+    <section class="about-hero" aria-label="כותרת עמוד אודות">
+      <div class="about-hero-img-wrap" aria-hidden="true">
+        <img src="IMG_0584.jpeg" alt="" class="about-hero-img" id="heroImg" />
+        <div class="about-hero-overlay"></div>
       </div>
-
-      <div class="story-text-col">
-        <div class="story-block reveal-up">
-          <span class="section-tag">הסיפור שלי</span>
-          <h2 class="story-heading">מי אני</h2>
-          <p>
-            שמי דניאלה לוין, ואני פסיכותרפיסטית הוליסטית עם ניסיון של מעל עשר שנים בליווי
-            אנשים דרך תהליכים טיפוליים עמוקים. הדרך שלי לתחום הטיפול התחילה מתוך חיפוש
-            אישי — תוך הבנה שריפוי אמיתי חייב לכלול את הגוף, הנפש והרוח יחד.
-          </p>
-        </div>
-
-        <div class="story-block reveal-up">
-          <h2 class="story-heading">למה הוליסטי</h2>
-          <p>
-            הגישה ההוליסטית מביטה על האדם כשלם — לא רק על הסימפטום, אלא על השורש.
-            בעבודה שלי אני משלבת כלים מהפסיכותרפיה הקלאסית עם טכניקות גוף-נפש, עבודה
-            אנרגטית ואבחון ציורים ייחודי שפיתחתי לאורך שנות עבודתי.
-          </p>
-        </div>
-
-        <div class="story-block reveal-up">
-          <h2 class="story-heading">מה מניע אותי</h2>
-          <p>
-            כל מטופל שנכנס אליי לחדר מביא איתו עולם שלם. הזכות להיות עדה לתהליך השחרור
-            וההתחדשות של אנשים — זה מה שמעיר אותי בבוקר ומזכיר לי למה בחרתי בדרך הזו.
-          </p>
-        </div>
+      <div class="about-hero-content">
+        <p class="about-hero-tag reveal-line">פסיכותרפיסטית הוליסטית</p>
+        <h1 class="about-hero-name reveal-line delay-1">דניאלה לוין</h1>
+        <p class="about-hero-sub reveal-line delay-2">מרחב בטוח לריפוי, לצמיחה ולחיים שלמים יותר</p>
       </div>
-
-    </div>
-  </section>
-
-  <!-- ===== PILLARS ===== -->
-  <section class="pillars-section">
-    <div class="container">
-      <span class="section-tag centered">הגישה שלי</span>
-      <h2 class="section-title centered pillars-title">שלושת עמודי התווך</h2>
-      <div class="pillars-grid">
-        <div class="pillar-card reveal-up">
-          <div class="pillar-icon">🌿</div>
-          <h3>גוף</h3>
-          <p>הגוף זוכר מה שהמוח מנסה לשכוח. אני עובדת עם המודעות הגופנית כדרך לשחרר
-          מתחים, טראומות ודפוסים שנתקעו בתא.</p>
-        </div>
-        <div class="pillar-card reveal-up delay-1">
-          <div class="pillar-icon">🧠</div>
-          <h3>נפש</h3>
-          <p>הבנה של דפוסים רגשיים, אמונות מגבילות ומנגנוני הגנה — יחד עם פיתוח כלים
-          לחיים רגשיים בריאים ומאוזנים יותר.</p>
-        </div>
-        <div class="pillar-card reveal-up delay-2">
-          <div class="pillar-icon">✨</div>
-          <h3>רוח</h3>
-          <p>חיבור למשמעות, לערכים ולאני העמוק ביותר שלנו. הממד הרוחני לא חייב להיות
-          דתי — הוא פשוט מה שמרגיש אמיתי עבורך.</p>
-        </div>
+      <div class="about-hero-scroll" aria-hidden="true">
+        <span class="scroll-line"></span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FULL-BLEED IMAGE WITH QUOTE ===== -->
-  <section class="quote-section">
-    <div class="quote-bg-img-wrap">
-      <img src="IMG_4726.jpeg" alt="חדר הטיפולים" class="quote-bg-img" id="quoteImg" />
-      <div class="quote-bg-overlay"></div>
-    </div>
-    <div class="container quote-content">
-      <blockquote class="big-quote reveal-up">
-        "הריפוי לא מתחיל כשמשהו נגמר —<br />
-        הוא מתחיל כשאנחנו מתחילים להקשיב לעצמנו."
-      </blockquote>
-      <cite class="big-quote-cite reveal-up delay-1">— דניאלה לוין</cite>
-    </div>
-  </section>
-
-  <!-- ===== TRAINING / CREDENTIALS ===== -->
-  <section class="credentials-section">
-    <div class="container credentials-inner">
-
-      <div class="credentials-text reveal-up">
-        <span class="section-tag">הכשרה ולימודים</span>
-        <h2 class="section-title">הבסיס המקצועי</h2>
-        <p class="credentials-intro">
-          הידע שאני מביאה לחדר הטיפולים נבנה לאורך שנים רבות של לימוד,
-          התמחות ועבודה קלינית — תמיד מתוך גישה פתוחה ומתפתחת.
+    <!-- ===== BIG STATEMENT ===== -->
+    <section class="statement-section" aria-label="אמירה מרכזית">
+      <div class="container">
+        <p class="statement-text split-reveal">
+          אני מאמינה שכל אדם נושא בתוכו<br class="br-desktop" />
+          את הכוח לרפא את עצמו —<br class="br-desktop" />
+          <em>לפעמים הוא פשוט צריך מישהי לצדו.</em>
         </p>
       </div>
+    </section>
 
-      <div class="timeline reveal-up delay-1">
-        <div class="timeline-item">
-          <span class="timeline-year">2010</span>
-          <div class="timeline-body">
-            <h4>תואר ראשון בפסיכולוגיה</h4>
-            <p>אוניברסיטת תל אביב — התמחות בפסיכולוגיה קלינית</p>
+    <!-- ===== STORY — sticky image + scrolling text ===== -->
+    <section class="story-section" aria-labelledby="story-heading">
+      <div class="story-inner container">
+
+        <div class="story-sticky-col" aria-hidden="true">
+          <div class="story-sticky-img-wrap">
+            <img src="images/daniella-dor-holistic-therapist-about.jpg" alt="" class="story-img" />
           </div>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2013</span>
-          <div class="timeline-body">
-            <h4>הכשרה בפסיכותרפיה הוליסטית</h4>
-            <p>הכשרה מקיפה בגישה גוף-נפש-רוח, בית הספר להילינג</p>
+
+        <div class="story-text-col">
+          <div class="story-block reveal-up">
+            <span class="section-tag">הסיפור שלי</span>
+            <h2 class="story-heading" id="story-heading">מי אני</h2>
+            <p>
+              שמי דניאלה לוין, ואני פסיכותרפיסטית הוליסטית עם ניסיון של מעל עשר שנים בליווי
+              אנשים דרך תהליכים טיפוליים עמוקים. הדרך שלי לתחום הטיפול התחילה מתוך חיפוש
+              אישי — תוך הבנה שריפוי אמיתי חייב לכלול את הגוף, הנפש והרוח יחד.
+            </p>
+          </div>
+
+          <div class="story-block reveal-up">
+            <h2 class="story-heading">למה הוליסטי</h2>
+            <p>
+              הגישה ההוליסטית מביטה על האדם כשלם — לא רק על הסימפטום, אלא על השורש.
+              בעבודה שלי אני משלבת כלים מהפסיכותרפיה הקלאסית עם טכניקות גוף-נפש, עבודה
+              אנרגטית ואבחון ציורים ייחודי שפיתחתי לאורך שנות עבודתי.
+            </p>
+          </div>
+
+          <div class="story-block reveal-up">
+            <h2 class="story-heading">מה מניע אותי</h2>
+            <p>
+              כל מטופל שנכנס אליי לחדר מביא איתו עולם שלם. הזכות להיות עדה לתהליך השחרור
+              וההתחדשות של אנשים — זה מה שמעיר אותי בבוקר ומזכיר לי למה בחרתי בדרך הזו.
+            </p>
           </div>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2016</span>
-          <div class="timeline-body">
-            <h4>הסמכה בטיפול בטראומה</h4>
-            <p>שיטת EMDR וגישות סומאטיות לעיבוד טראומה</p>
+
+      </div>
+    </section>
+
+    <!-- ===== PILLARS ===== -->
+    <section class="pillars-section" aria-labelledby="pillars-heading">
+      <div class="container">
+        <span class="section-tag centered">הגישה שלי</span>
+        <h2 class="section-title centered pillars-title" id="pillars-heading">שלושת עמודי התווך</h2>
+        <div class="pillars-grid">
+          <div class="pillar-card reveal-up">
+            <div class="pillar-icon" aria-hidden="true">🌿</div>
+            <h3>גוף</h3>
+            <p>הגוף זוכר מה שהמוח מנסה לשכוח. אני עובדת עם המודעות הגופנית כדרך לשחרר
+            מתחים, טראומות ודפוסים שנתקעו בתא.</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2019</span>
-          <div class="timeline-body">
-            <h4>אבחון ציורים — פיתוח שיטה ייחודית</h4>
-            <p>שנות מחקר ופיתוח של כלי אבחוני ייחודי דרך שפה חזותית</p>
+          <div class="pillar-card reveal-up delay-1">
+            <div class="pillar-icon" aria-hidden="true">🧠</div>
+            <h3>נפש</h3>
+            <p>הבנה של דפוסים רגשיים, אמונות מגבילות ומנגנוני הגנה — יחד עם פיתוח כלים
+            לחיים רגשיים בריאים ומאוזנים יותר.</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">היום</span>
-          <div class="timeline-body">
-            <h4>מעל 10 שנות ניסיון קליני</h4>
-            <p>מאות מטופלים, הרצאות, סדנאות ופודקאסט שבועי</p>
+          <div class="pillar-card reveal-up delay-2">
+            <div class="pillar-icon" aria-hidden="true">✨</div>
+            <h3>רוח</h3>
+            <p>חיבור למשמעות, לערכים ולאני העמוק ביותר שלנו. הממד הרוחני לא חייב להיות
+            דתי — הוא פשוט מה שמרגיש אמיתי עבורך.</p>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ===== FULL-BLEED IMAGE WITH QUOTE ===== -->
+    <section class="quote-section" aria-labelledby="big-quote">
+      <div class="quote-bg-img-wrap" aria-hidden="true">
+        <img src="IMG_4726.jpeg" alt="" class="quote-bg-img" id="quoteImg" />
+        <div class="quote-bg-overlay"></div>
+      </div>
+      <div class="container quote-content">
+        <blockquote class="big-quote reveal-up" id="big-quote">
+          "הריפוי לא מתחיל כשמשהו נגמר —<br />
+          הוא מתחיל כשאנחנו מתחילים להקשיב לעצמנו."
+        </blockquote>
+        <cite class="big-quote-cite reveal-up delay-1">— דניאלה לוין</cite>
+      </div>
+    </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="about-cta">
-    <div class="container about-cta-inner">
-      <h2 class="about-cta-title reveal-up">מוכנים להתחיל את המסע?</h2>
-      <p class="about-cta-sub reveal-up delay-1">פגישת היכרות ראשונה ללא עלות — בואו נדבר</p>
-      <a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94."
-         target="_blank" rel="noopener" class="btn-about-cta reveal-up delay-2">
-        קבעו פגישה בוואטסאפ
-      </a>
-    </div>
-  </section>
+    <!-- ===== TRAINING / CREDENTIALS ===== -->
+    <section class="credentials-section" aria-labelledby="credentials-heading">
+      <div class="container credentials-inner">
+
+        <div class="credentials-text reveal-up">
+          <span class="section-tag">הכשרה ולימודים</span>
+          <h2 class="section-title" id="credentials-heading">הבסיס המקצועי</h2>
+          <p class="credentials-intro">
+            הידע שאני מביאה לחדר הטיפולים נבנה לאורך שנים רבות של לימוד,
+            התמחות ועבודה קלינית — תמיד מתוך גישה פתוחה ומתפתחת.
+          </p>
+        </div>
+
+        <div class="timeline reveal-up delay-1" role="list" aria-label="ציר זמן השכלה">
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2010</span>
+            <div class="timeline-body">
+              <h3>תואר ראשון בפסיכולוגיה</h3>
+              <p>אוניברסיטת תל אביב — התמחות בפסיכולוגיה קלינית</p>
+            </div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2013</span>
+            <div class="timeline-body">
+              <h3>הכשרה בפסיכותרפיה הוליסטית</h3>
+              <p>הכשרה מקיפה בגישה גוף-נפש-רוח, בית הספר להילינג</p>
+            </div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2016</span>
+            <div class="timeline-body">
+              <h3>הסמכה בטיפול בטראומה</h3>
+              <p>שיטת EMDR וגישות סומאטיות לעיבוד טראומה</p>
+            </div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2019</span>
+            <div class="timeline-body">
+              <h3>אבחון ציורים — פיתוח שיטה ייחודית</h3>
+              <p>שנות מחקר ופיתוח של כלי אבחוני ייחודי דרך שפה חזותית</p>
+            </div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">היום</span>
+            <div class="timeline-body">
+              <h3>מעל 10 שנות ניסיון קליני</h3>
+              <p>מאות מטופלים, הרצאות, סדנאות ופודקאסט שבועי</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="about-cta" aria-labelledby="about-cta-heading">
+      <div class="container about-cta-inner">
+        <h2 class="about-cta-title reveal-up" id="about-cta-heading">מוכנים להתחיל את המסע?</h2>
+        <p class="about-cta-sub reveal-up delay-1">פגישת היכרות ראשונה ללא עלות — בואו נדבר</p>
+        <a href="https://wa.me/972526996689?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%94%20%D7%9C%D7%AA%D7%99%D7%90%D7%95%D7%9C%20%D7%9E%D7%95%D7%A2%D7%93%20%D7%A4%D7%92%D7%99%D7%A9%D7%94."
+           target="_blank" rel="noopener" class="btn-about-cta reveal-up delay-2">
+          קבעו פגישה בוואטסאפ
+        </a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <nav class="footer-nav">
-        <a href="about.html">אודות</a>
+      <nav class="footer-nav" aria-label="ניווט תחתון">
+        <a href="about.html" aria-current="page">אודות</a>
         <a href="blog.html">בלוג</a>
         <a href="podcast.html">פודקאסט</a>
         <a href="contact.html">צור קשר</a>
+        <a href="accessibility.html">הצהרת נגישות</a>
       </nav>
       <p class="footer-copy">© כל הזכויות שמורות לדניאלה לוין 2025</p>
     </div>

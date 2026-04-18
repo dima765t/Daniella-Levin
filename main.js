@@ -4,11 +4,39 @@ window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 20);
 });
 
-// ── Hamburger menu ──
+// ── Hamburger / mobile menu ──
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
+
+function openMobileMenu() {
+  mobileMenu.removeAttribute('hidden');
+  mobileMenu.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.setAttribute('aria-label', 'סגירת תפריט ניווט');
+  const firstLink = mobileMenu.querySelector('a');
+  if (firstLink) firstLink.focus();
+}
+
+function closeMobileMenu() {
+  mobileMenu.setAttribute('hidden', '');
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'פתיחת תפריט ניווט');
+}
+
 hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
+  if (mobileMenu.hasAttribute('hidden')) {
+    openMobileMenu();
+  } else {
+    closeMobileMenu();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !mobileMenu.hasAttribute('hidden')) {
+    closeMobileMenu();
+    hamburger.focus();
+  }
 });
 
 // ── Testimonials carousel ──
@@ -18,8 +46,14 @@ const dots = document.querySelectorAll('.dot');
 
 function showSlide(index) {
   testimonials.forEach((el, i) => {
-    el.classList.toggle('active', i === index);
-    if (dots[i]) dots[i].classList.toggle('active', i === index);
+    const isActive = i === index;
+    el.classList.toggle('active', isActive);
+    el.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+  });
+  dots.forEach((dot, i) => {
+    const isActive = i === index;
+    dot.classList.toggle('active', isActive);
+    dot.setAttribute('aria-pressed', isActive ? 'true' : 'false');
   });
 }
 
@@ -38,8 +72,32 @@ function setSlide(index) {
   showSlide(current);
 }
 
-// Autoplay every 5 seconds
-setInterval(nextSlide, 5000);
+// Initialise ARIA state on all testimonials
+showSlide(0);
+
+// Autoplay — respects prefers-reduced-motion; pauses on hover/focus
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let autoplayTimer;
+
+function startAutoplay() {
+  if (!prefersReducedMotion) {
+    autoplayTimer = setInterval(nextSlide, 5000);
+  }
+}
+
+function stopAutoplay() {
+  clearInterval(autoplayTimer);
+}
+
+startAutoplay();
+
+const carouselWrap = document.querySelector('.carousel-wrap');
+if (carouselWrap) {
+  carouselWrap.addEventListener('mouseenter', stopAutoplay);
+  carouselWrap.addEventListener('mouseleave', startAutoplay);
+  carouselWrap.addEventListener('focusin',    stopAutoplay);
+  carouselWrap.addEventListener('focusout',   startAutoplay);
+}
 
 // ── Scroll-reveal for sections ──
 const observerOptions = {
