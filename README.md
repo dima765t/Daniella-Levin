@@ -21,10 +21,10 @@ A professional, conversion-focused landing page for Daniella Levin, a Holistic P
 
 ## 🚀 Project Roadmap & Future Iterations
 To scale this digital asset and improve performance, the planned roadmap includes:
-- [ ] **Domain Migration:** Transition from the `.github.io` subdomain to a dedicated custom domain (e.g., `.co.il`) to enhance brand authority and local SEO.
+- [V] **Domain Migration:** Transition from the `.github.io` subdomain to a dedicated custom domain (e.g., `.co.il`) to enhance brand authority and local SEO.
 - [ ] **Analytics Integration:** Implement Google Analytics 4 (GA4) to track user journey drop-offs, session duration, and WhatsApp CTA click-through rates (CTR).
 - [ ] **SEO Optimization:** Update meta tags, image alt texts, and implement structured data (Schema markup) specifically for local healthcare providers.
-- [ ] **Accessibility Compliance:** Integrate an accessibility widget and statement to meet local digital accessibility regulations.
+- [V] **Accessibility Compliance:** Integrate an accessibility widget and statement to meet local digital accessibility regulations.
 
 ## 📬 Project Management
 Maintained and managed by Dima Levin - https://www.linkedin.com/in/dima-levin-y37/
