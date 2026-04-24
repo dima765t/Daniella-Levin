@@ -1,0 +1,493 @@
+/* ============================================================
+   DRAWING DIAGNOSIS PAGE — drawing-diagnosis.css
+   ============================================================ */
+
+/* ── Active nav ── */
+.active-nav { color: var(--amber-text) !important; }
+.active-nav::after { width: 100% !important; }
+
+/* ── Shared reveal-up (scroll-driven) ── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-up.delay-1 { transition-delay: 0.12s; }
+.reveal-up.delay-2 { transition-delay: 0.24s; }
+.reveal-up.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+.diag-hero {
+  background: linear-gradient(160deg, #1c2c18 0%, #2e1e0e 60%, #0f0b07 100%);
+  padding: 9rem 0 5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(200, 147, 58, 0.15);
+}
+
+.diag-hero .section-tag {
+  color: var(--amber-light);
+  background: rgba(200, 147, 58, 0.15);
+  border: 1px solid rgba(200, 147, 58, 0.35);
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.diag-hero .page-hero-title {
+  color: #fff;
+}
+
+.diag-hero .page-hero-desc {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ============================================================
+   INTRO SECTION
+   ============================================================ */
+.diag-intro-section {
+  background: var(--white);
+  padding: 6rem 0;
+}
+
+.diag-intro-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.diag-intro-text p {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  line-height: 1.85;
+  margin-top: 1rem;
+}
+
+.diag-intro-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.diag-highlight-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.diag-highlight-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1.3;
+}
+
+.diag-highlight-item h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 0.3rem;
+}
+
+.diag-highlight-item p {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   5 DRAWINGS SECTION
+   ============================================================ */
+.diag-drawings-section {
+  background: var(--beige);
+  padding: 7rem 0;
+}
+
+.diag-drawings-intro {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  line-height: 1.75;
+}
+
+.diag-drawings-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
+}
+
+.diag-drawing-card {
+  background: var(--white);
+  border: 1px solid var(--beige-deeper);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.diag-drawing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.diag-drawing-icon-wrap {
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem 1.2rem;
+  position: relative;
+}
+
+/* Gradient backgrounds per drawing type */
+.diag-icon--tree   { background: linear-gradient(135deg, #3a5c3a 0%, #5a7047 60%, #7a9462 100%); }
+.diag-icon--house  { background: linear-gradient(135deg, #6b4f2e 0%, #8b6b40 60%, #c8933a 100%); }
+.diag-icon--family { background: linear-gradient(135deg, #4a3060 0%, #7a5090 60%, #b090c8 100%); }
+.diag-icon--person { background: linear-gradient(135deg, #2e4a6b 0%, #4a6a8b 60%, #7aaac8 100%); }
+.diag-icon--free   { background: linear-gradient(135deg, #5c3030 0%, #8b4a4a 60%, #c87070 100%); }
+
+.diag-drawing-number {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.25);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.diag-drawing-body {
+  padding: 1.2rem;
+}
+
+.diag-drawing-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.diag-drawing-body p {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   SAMPLE CASE SECTION
+   ============================================================ */
+.diag-sample-section {
+  background: #0f0b07;
+  padding: 7rem 0;
+}
+
+.diag-sample-tag {
+  color: var(--amber-light) !important;
+}
+
+.diag-sample-title {
+  color: #fff !important;
+}
+
+.diag-sample-intro {
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 560px;
+  margin: 0.5rem auto 3rem;
+  line-height: 1.75;
+  font-style: italic;
+}
+
+.diag-sample-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.diag-sample-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 147, 58, 0.2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.diag-sample-card-header {
+  background: rgba(200, 147, 58, 0.12);
+  border-bottom: 1px solid rgba(200, 147, 58, 0.2);
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.diag-sample-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber-light);
+  background: rgba(200, 147, 58, 0.2);
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.diag-sample-card-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.diag-sample-card-body {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.diag-sample-card-body p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+}
+
+.diag-sample-insight {
+  background: rgba(200, 147, 58, 0.1);
+  border-right: 3px solid var(--amber-light);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.9rem 1.2rem !important;
+  font-size: 0.88rem !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.diag-sample-insight strong {
+  color: var(--amber-light);
+}
+
+/* Recommendations box */
+.diag-sample-recs {
+  background: rgba(90, 112, 71, 0.12);
+  border: 1px solid rgba(90, 112, 71, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 2.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.diag-sample-recs-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green-light);
+  margin-bottom: 1.2rem;
+}
+
+.diag-recs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.diag-recs-list li {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  padding-right: 1.5rem;
+  position: relative;
+}
+
+.diag-recs-list li::before {
+  content: '✓';
+  position: absolute;
+  right: 0;
+  color: var(--green-light);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ============================================================
+   FOR WHOM SECTION
+   ============================================================ */
+.diag-audience-section {
+  background: var(--amber-pale);
+  padding: 7rem 0;
+}
+
+.diag-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.diag-audience-card {
+  background: var(--white);
+  border: 1px solid var(--beige-deeper);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.diag-audience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  background: var(--beige);
+}
+
+.diag-audience-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  display: block;
+  line-height: 1;
+}
+
+.diag-audience-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 0.6rem;
+}
+
+.diag-audience-card p {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   PROCESS STEPS SECTION
+   ============================================================ */
+.diag-process-section {
+  background: var(--white);
+  padding: 7rem 0;
+}
+
+.diag-steps {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 0;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.diag-step {
+  background: var(--beige);
+  border: 1px solid var(--beige-deeper);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 1.8rem;
+  text-align: center;
+}
+
+.diag-step-num {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--amber-accessible);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.diag-step-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.diag-step-body p {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+.diag-step-arrow {
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-top: -2rem;
+}
+
+.diag-step-arrow::after {
+  content: '←';
+  font-size: 1.5rem;
+  color: var(--beige-deeper);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .diag-drawings-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .diag-drawings-grid .diag-drawing-card:nth-child(4),
+  .diag-drawings-grid .diag-drawing-card:nth-child(5) {
+    /* shift last two to center in row of 3 */
+  }
+}
+
+@media (max-width: 900px) {
+  .diag-intro-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .diag-audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diag-drawings-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .diag-steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 420px;
+    margin-inline: auto;
+    margin-top: 2.5rem;
+  }
+  .diag-step-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .diag-hero { padding: 8rem 0 4rem; }
+
+  .diag-sample-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .diag-drawings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diag-intro-section,
+  .diag-drawings-section,
+  .diag-sample-section,
+  .diag-audience-section,
+  .diag-process-section { padding: 5rem 0; }
+}
+
+@media (max-width: 560px) {
+  .diag-drawings-grid {
+    grid-template-columns: 1fr;
+  }
+  .diag-audience-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+  .diag-sample-recs {
+    padding: 1.5rem 1.2rem;
+  }
+}

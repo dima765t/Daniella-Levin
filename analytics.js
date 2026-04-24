@@ -16,6 +16,7 @@
     'a.btn-watch',
     'a.btn-text',
     'a.lecture-thumb-link',
+    'a.btn-about-cta',
   ].join(', ');
 
   function getDeviceType() {
@@ -52,6 +53,11 @@
       if (cls.indexOf('episode-card') !== -1 || cls.indexOf('episodes') !== -1) return 'podcast_episode';
       if (cls.indexOf('podcast-platforms') !== -1 || cls.indexOf('podcast-hero') !== -1) return 'podcast_header';
       if (cls.indexOf('about-hero') !== -1 || cls.indexOf('therapist') !== -1 || cls.indexOf('bio-section') !== -1) return 'about_content';
+      if (cls.indexOf('diag-hero') !== -1 || cls.indexOf('diag-intro') !== -1) return 'drawing_diagnosis_hero';
+      if (cls.indexOf('diag-drawings') !== -1) return 'drawing_diagnosis_drawings';
+      if (cls.indexOf('diag-sample') !== -1) return 'drawing_diagnosis_sample';
+      if (cls.indexOf('diag-audience') !== -1) return 'drawing_diagnosis_audience';
+      if (cls.indexOf('diag-process') !== -1) return 'drawing_diagnosis_process';
       node = node.parentElement;
     }
     return 'page';
