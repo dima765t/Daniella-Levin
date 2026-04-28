@@ -31,6 +31,29 @@
 .reveal-line.is-visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================================
+   HERO + STATEMENT SHARED BACKGROUND
+   ============================================================ */
+.hero-statement-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #0f0b07;
+}
+
+.hero-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  will-change: transform;
+}
+
+/* ============================================================
    ABOUT HERO
    ============================================================ */
 .about-hero {
@@ -39,26 +62,13 @@
   min-height: 640px;
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
-}
-
-.about-hero-img-wrap {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.about-hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  will-change: transform;
+  z-index: 1;
 }
 
 .about-hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: linear-gradient(
     to top,
     rgba(10, 6, 2, 0.82) 0%,
@@ -127,10 +137,7 @@
    ============================================================ */
 .statement-section {
   position: relative;
-  background-image: url('images/daniella-levin-holistic-psychotherapist-header.JPG');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
+  z-index: 1;
   padding: 8rem 2rem;
   text-align: center;
 }
@@ -139,22 +146,12 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 6, 2, 0.72);
+  background: rgba(10, 6, 2, 0.65);
 }
 
 .statement-section .container {
   position: relative;
   z-index: 1;
-}
-
-/* iOS / mobile: fixed attachment is broken — fall back to solid dark */
-@supports (-webkit-touch-callout: none) {
-  .statement-section {
-    background-attachment: scroll;
-    background-image: none;
-    background-color: #0f0b07;
-  }
-  .statement-section::before { display: none; }
 }
 
 .statement-text {
