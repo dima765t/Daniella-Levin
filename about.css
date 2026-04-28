@@ -126,9 +126,35 @@
    BIG STATEMENT
    ============================================================ */
 .statement-section {
-  background: #0f0b07;
+  position: relative;
+  background-image: url('images/daniella-levin-holistic-psychotherapist-header.JPG');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
   padding: 8rem 2rem;
   text-align: center;
+}
+
+.statement-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 6, 2, 0.72);
+}
+
+.statement-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* iOS / mobile: fixed attachment is broken — fall back to solid dark */
+@supports (-webkit-touch-callout: none) {
+  .statement-section {
+    background-attachment: scroll;
+    background-image: none;
+    background-color: #0f0b07;
+  }
+  .statement-section::before { display: none; }
 }
 
 .statement-text {
