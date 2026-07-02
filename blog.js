@@ -98,6 +98,37 @@ if (blogGridSection && viewToggleBtns.length) {
   });
 }
 
+// ── Single post: reading progress + paragraph reveal ──
+const postArticle = document.querySelector('.post-article');
+if (postArticle) {
+  const revealTargets = postArticle.querySelectorAll(':scope > p, :scope > .post-pull-quote');
+  revealTargets.forEach(el => el.classList.add('post-reveal'));
+
+  const postRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        postRevealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  revealTargets.forEach(el => postRevealObserver.observe(el));
+
+  const progressFill = document.getElementById('postProgressFill');
+  if (progressFill) {
+    function updatePostProgress() {
+      const total = postArticle.offsetHeight - window.innerHeight;
+      const scrolled = Math.min(Math.max(-postArticle.getBoundingClientRect().top, 0), Math.max(total, 1));
+      const pct = total > 0 ? (scrolled / total) * 100 : 0;
+      progressFill.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updatePostProgress, { passive: true });
+    window.addEventListener('resize', updatePostProgress);
+    updatePostProgress();
+  }
+}
+
 // ── Scroll-reveal for blog cards ──
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
